@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Sâmara Miranda Loschi Ginecologista em Barbacena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --rose:#c8847a;
+  --rose-light:#f5ede9;
+  --rose-mid:#e8b4ac;
+  --cream:#fdf8f5;
+  --warm-white:#fffcfa;
+  --text-dark:#2a1f1c;
+  --text-mid:#6b4f49;
+  --text-light:#a08880;
+  --gold:#b8976a;
+  --gold-light:#e8d5b7;
+  --border:#edddd7;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--text-dark);overflow-x:hidden}
+
+/* WPP BUTTON GLOBAL */
+.wpp-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--rose);color:#fff;
+  padding:16px 32px;border-radius:50px;
+  font-size:15px;font-weight:500;letter-spacing:.3px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:all .3s ease;
+  box-shadow:0 4px 20px rgba(200,132,122,.35);
+}
+.wpp-btn:hover{background:#b5726a;transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,132,122,.45)}
+.wpp-btn svg{width:20px;height:20px;flex-shrink:0}
+.wpp-btn-outline{
+  background:transparent;color:var(--rose);
+  border:1.5px solid var(--rose);
+  box-shadow:none;
+}
+.wpp-btn-outline:hover{background:var(--rose);color:#fff}
+
+/* SECTION SHARED */
+section{padding:88px 24px}
+.container{max-width:1100px;margin:0 auto}
+.section-label{
+  font-size:11px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin-bottom:16px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-label::before{content:'';width:28px;height:1px;background:var(--gold)}
+.section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(32px,5vw,52px);
+  font-weight:400;line-height:1.15;
+  color:var(--text-dark);margin-bottom:20px;
+}
+.section-cta{margin-top:40px;display:flex;justify-content:center}
+
+/* HERO */
+#hero{
+  min-height:auto;padding:0;
+  background:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+#hero::before{
+  content:'';position:absolute;
+  top:-120px;right:-120px;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(200,132,122,.1) 0%,transparent 70%);
+  pointer-events:none;
+}
+#hero::after{
+  content:'';position:absolute;
+  bottom:-100px;left:-100px;
+  width:400px;height:400px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(184,151,106,.08) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-left{
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;
+  padding:60px 40px;
+  position:relative;z-index:2;
+  max-width:800px;
+}
+.hero-city{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(42px,7vw,88px);
+  font-weight:300;line-height:1;
+  color:var(--rose);letter-spacing:-1px;
+  margin-bottom:8px;
+  opacity:.18;
+  position:absolute;top:32px;left:50%;transform:translateX(-50%);
+  white-space:nowrap;pointer-events:none;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin-bottom:20px;
+  background:rgba(184,151,106,.08);
+  border:1px solid rgba(184,151,106,.2);
+  padding:8px 20px;border-radius:30px;
+}
+.hero-location-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(28px,4vw,42px);
+  font-weight:600;
+  color:var(--text-dark);
+  letter-spacing:.5px;
+  margin-bottom:16px;
+  text-transform:uppercase;
+}
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(38px,5.5vw,72px);
+  font-weight:400;line-height:1.1;
+  color:var(--text-dark);margin-bottom:20px;
+}
+h1 em{font-style:italic;color:var(--rose)}
+.hero-headline{
+  font-size:clamp(15px,1.6vw,18px);
+  color:var(--text-mid);font-weight:300;
+  line-height:1.75;margin-bottom:16px;
+  max-width:560px;
+}
+.crm-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;color:var(--text-light);
+  border:1px solid var(--border);
+  padding:6px 14px;border-radius:20px;
+  margin-bottom:36px;letter-spacing:.3px;
+}
+.hero-right{display:none}
+
+/* SOBRE */
+#sobre{background:var(--warm-white)}
+.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.sobre-visual{order:-1}
+.sobre-text p{
+  font-size:16px;color:var(--text-mid);
+  line-height:1.8;margin-bottom:16px;font-weight:300;
+}
+.sobre-text p:last-of-type{margin-bottom:0}
+.sobre-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--border);border:1px solid var(--border);
+  border-radius:16px;overflow:hidden;margin-top:36px;
+}
+.stat{
+  background:var(--cream);padding:24px;
+  display:flex;flex-direction:column;gap:4px;
+}
+.stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:36px;font-weight:400;color:var(--rose);
+}
+.stat-label{font-size:12px;color:var(--text-light);letter-spacing:.5px}
+.sobre-visual{
+  position:relative;
+  background:var(--rose-light);
+  border-radius:24px;overflow:hidden;
+  aspect-ratio:3/4;
+}
+.sobre-visual img{width:100%;height:100%;object-fit:cover;object-position:top}
+.sobre-visual-tag{
+  position:absolute;bottom:24px;left:24px;right:24px;
+  background:rgba(255,252,250,.92);
+  backdrop-filter:blur(8px);
+  border-radius:12px;padding:16px 20px;
+  border:1px solid var(--border);
+}
+.sobre-visual-tag p{font-size:13px;color:var(--text-mid);line-height:1.5}
+.sobre-visual-tag strong{color:var(--text-dark);font-weight:500}
+
+/* SERVIÇOS */
+#servicos{background:var(--cream)}
+.servicos-header{text-align:center;max-width:560px;margin:0 auto 56px}
+.servicos-header p{font-size:16px;color:var(--text-light);line-height:1.7;margin-top:12px}
+.servicos-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;margin-bottom:48px;
+}
+.servico-card{
+  background:var(--warm-white);
+  border:1px solid var(--border);
+  border-radius:16px;padding:28px 24px;
+  transition:all .3s ease;
+  position:relative;overflow:hidden;
+}
+.servico-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--rose),var(--rose-mid));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .3s ease;
+}
+.servico-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(200,132,122,.15)}
+.servico-card:hover::before{transform:scaleX(1)}
+.servico-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--rose-light);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;
+}
+.servico-icon svg{width:22px;height:22px;stroke:var(--rose);fill:none;stroke-width:1.5}
+.servico-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-weight:500;
+  color:var(--text-dark);margin-bottom:8px;
+}
+.servico-card p{font-size:13px;color:var(--text-light);line-height:1.6}
+
+/* DEPOIMENTOS */
+#depoimentos{background:var(--rose-light)}
+.depo-header{text-align:center;max-width:500px;margin:0 auto 52px}
+.depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px}
+.depo-card{
+  background:var(--warm-white);border-radius:16px;
+  padding:28px;border:1px solid var(--border);
+  display:flex;flex-direction:column;gap:16px;
+}
+.depo-stars{display:flex;gap:3px}
+.depo-stars span{color:var(--gold);font-size:14px}
+.depo-text{
+  font-size:14px;color:var(--text-mid);
+  line-height:1.75;font-style:italic;
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px;font-weight:400;
+}
+.depo-author{
+  display:flex;align-items:center;gap:10px;
+  padding-top:12px;border-top:1px solid var(--border);
+}
+.depo-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--rose-mid);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:500;color:#fff;flex-shrink:0;
+}
+.depo-name{font-size:13px;font-weight:500;color:var(--text-dark)}
+.depo-platform{font-size:11px;color:var(--text-light)}
+.depo-verified{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:10px;color:var(--gold);
+  background:rgba(184,151,106,.1);
+  padding:3px 8px;border-radius:20px;
+  border:1px solid rgba(184,151,106,.2);
+  margin-top:2px;
+}
+
+/* LOCALIZAÇÃO */
+#localizacao{background:var(--warm-white)}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:48px}
+.loc-card{
+  background:var(--cream);border:1px solid var(--border);
+  border-radius:16px;padding:32px;
+}
+.loc-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;font-weight:500;color:var(--text-dark);
+  margin-bottom:20px;
+}
+.loc-item{
+  display:flex;align-items:flex-start;gap:12px;
+  margin-bottom:14px;
+}
+.loc-item svg{width:18px;height:18px;stroke:var(--rose);flex-shrink:0;margin-top:2px}
+.loc-item span{font-size:14px;color:var(--text-mid);line-height:1.6}
+.loc-tele{
+  background:linear-gradient(135deg,var(--rose-light),var(--gold-light));
+  border-radius:16px;padding:32px;
+  text-align:center;grid-column:1/-1;
+  border:1px solid var(--border);
+}
+.loc-tele p{font-size:14px;color:var(--text-mid);margin-top:8px}
+
+/* CTA FINAL */
+#cta-final{
+  background:var(--text-dark);
+  text-align:center;padding:56px 24px;
+  position:relative;overflow:hidden;
+}
+#cta-final::before{
+  content:'';position:absolute;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,132,122,.15) 0%,transparent 70%);
+  pointer-events:none;
+}
+#cta-final .section-title{color:#fff}
+#cta-final p{font-size:16px;color:rgba(255,255,255,.6);margin-bottom:36px;font-weight:300}
+.crm-final{
+  margin-top:32px;font-size:12px;
+  color:rgba(255,255,255,.3);letter-spacing:.5px;
+}
+
+/* FADE IN */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  #hero{min-height:auto}
+  .hero-left{padding:48px 24px 48px}
+  .hero-location-title{font-size:clamp(22px,6vw,32px)}
+  .sobre-grid{grid-template-columns:1fr;gap:40px}
+  .sobre-visual{aspect-ratio:4/3;max-height:320px;order:-1}
+  .servicos-grid{grid-template-columns:1fr 1fr}
+  .depo-grid{grid-template-columns:1fr}
+  .loc-grid{grid-template-columns:1fr}
+  .loc-tele{grid-column:auto}
+  section{padding:64px 24px}
+}
+@media(max-width:600px){
+  .servicos-grid{grid-template-columns:1fr}
+  h1{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left fade-in">
+    <div class="hero-tag">Ginecologista em Barbacena</div>
+    <h1>Sua saúde merece atenção especializada e um <em>olhar humano.</em></h1>
+    <p class="hero-headline">Consultas presenciais e teleconsulta com a Dra. Sâmara Miranda Loschi ginecologista e obstetra atendendo mulheres em todas as fases da vida.</p>
+    <div class="crm-badge">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M4 6l1.5 1.5L8 4"/></svg>
+      CRM MG 74732 · RQE Nº 54019
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=5532998089136" target="_blank" class="wpp-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Agendar pelo WhatsApp
+    </a>
+  </div>
+  <div class="hero-right">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/7QCEUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAGgcAigAYkZCTUQwYTAwMGFlNDAxMDAwMDNlMDgwMDAwNDkwZTAwMDAzMTBmMDAwMDVkMTAwMDAwNWMxMjAwMDA2ZDFjMDAwMGE3MWQwMDAwMWUxZjAwMDBhODIwMDAwMGU5MzAwMDAwAP/bAIQABQYGCwgLCwsLCw0LCwsNDg4NDQ4ODw0ODg4NDxAQEBEREBAQEA8TEhMPEBETFBQTERMWFhYTFhUVFhkWGRYWEgEFBQUKBwoICQkICwgKCAsKCgkJCgoMCQoJCgkMDQsKCwsKCw0MCwsICwsMDAwNDQwMDQoLCg0MDQ0MExQTExOc/8IAEQgBQAFAAwEiAAIRAQMRAf/EAK8AAAEFAQEAAAAAAAAAAAAAAAMBAgQFBgAHAQADAQEAAAAAAAAAAAAAAAAAAQIDBBAAAgIBBAICAgEEAQUAAAAAAAECEQMQEiAhBDEiMBNBMiNRYYEzBUBCUvERAAECAgkCBQQDAAAAAAAAAAEAERAhAiAwMUBRYXGBEkFQYpGx8CKhwdEycoISAAIBAgUDBAMBAAAAAAAAAAABESExEEFRYXGBkaEgscHwMNHh8f/aAAwDAQACEAMQAAAB3/dxSqijVUUXd3ArkUaqnCXu4I+Y0+SzuJVjgwSn18q0KFImzpTPsYGOo1VUc9HCUrShotLnNFviBrmAgiikQTxIaWNIZq+7ujNe7huVqiVUUaua4FTuQvcxlf51MpIcs9VfJhzUrX56UlX6jRWs/FI5KsIkrKwvtXoqyWkRzbaHN6PaANcyWgihQgShTHIiyBa3u7pzXkUaqiiVUUaqioXk4Fzug80Tonug50bRQrfDa0vaqYaWKRiVMHE+hZ+TEhnQdMdKWqnKZUU1YntnVdntIGuZLQRQoaIoUwyI8lrWKi9GfKijd3cCqnIcrVByc0Ifkm+xudRa4dpNaR5Y3L0382mnK7GRApGtLXYG21iPn9bmqylT6+fMzaq0c0/Q5/QaILHsBoiCQgShTHIiyWtarV6M1c1w+7uBVRULyKHIogwOfm0GGkbVZzZzXZu5yues+9jW8a3cGRolXlOi1ErXOlwPqnnbyh2VZYVlNLFHU3dnn7+0FjxzTRkGhoDATFJjSRa1U7phyoqF7uBeRQXkUOqLbLS8XQWdVlVlvM1pMtcdaZjSLbXya4GOp9d51f1FpG6mmtFkr3PaZUJbUO3JGJLK1Jua2xsCxw5pBFEDQmAmOTElBrVa7ozdyKC8nAqoo17lE3E7PCZVjgpf51eCtM/jrjtDm7vStPHfR8vVLuam+0dpQXNneUfF6XFxF7Hkh15XlG/SbGwr7CwI3jloIokNAcCYpUWUzVuY7ozcrVGqooKrVB3IgRMXqsvjeY0kCzxqxz97TzXm1qCL057WfkbXi7ru0rLuLs5tY/XHHV86NWVz3Ltz8vKydPgzqI7HsloIokNAYCocqJLFqlavTDlRQVU4HKnAqcFFLnJtZz6RdlkdrJWx7mvmvOa+3rN4bYTLLDoiXin5+h9jBlOcvLsZG/PAVGaYF4bWrWdW2VEdrmS0EUQ2xzgTDMhTRalzV6YcqKDuRQ5UQFp7XHw69kk/Pa39VPCXTTqZrO0OyqLl15X6HHeLYDl47y1QmsGRknSI1Zo26RiKr02rmM3dQZ1THRWzTRkEDQmEnHmRTi1jmO6YcqKDu7g5iohmJ0WYwuXJgByqTMDYsZBsoNyGr0NdcyrOQ2LWZ0laxiORjDO5j2o+kFpYcg4ZlIgNVCWiINCBMJNhQlT1Lwu68iuG8auaokaQKdVQ31VzWQucFFWjYspq/gCsNE+msg1F1Jpr+bUgyvRGFYm3kcDmtex8KS9qqWRGgrmljmXCUSHNG2R5hXlla+AXUn3ea0jRe7qSsdBRnKlR8XQg43Ure1FKvOm0+bvmQTtC5XTZy8Vz2uR2dRlojkeBNyc0TiBex0CwEKrrLTCROkZl1h346m9UWGjhyOnLGlAdbG0ed0TRu5NJWhvMzjWbN3cnRW2MW/0h/VT3DrGjntXudnZ9GssaUhenJn7aqlniFtGZz2DEZERzNeHPG5qJhPQMfmZswzY0SeKZUaKe0Hbz5d4XY7m1OV1NoyotxCz9xTc20UM+rypkKZVJ3FdKzV56G9obYKMdUdmxbJFF2cmvllWZq4+szXwiNSuAtBkjqBeBwHo7QJOCkOLgGMwukzbOnst880qPz3LqcpqaiU10e4qa90fj3bCeuesaOeuCNBNP1zuaKSqWdt6bX3N9WG7PR9hDJFWBq89KeSESlMSKlKUyIqch4CUivilqc0yfCmXkESpNdQp20ZFwHZ9EzU4zX1E6LKgVFKQAOPcDTljSsqbqkGNweqAaPN6G4hS2xxXQiR02Sor89rGdCKTLNEK0djODu4zanRmktIFzQqfS5ysuIN6LS1rpHRniejJy9szZ+f7fTK6pbrO1nEDKjcu/HGWXCpbSIroiALrCWVXdkp1tMvEUGbCjQr2hz1lxxzZokpnOTNFNa5JrNZY1BNO4ZwbCsQVFTxkqGGZIaySquXW3c4fbXlcZe9zqmTDITLRqOdFVKWleqyU6Ja6J82BBM7kcM8kqRHSdGm6zdMMj1POYcHSGppMuO4NSjeHNMmVVszgKlTTJaN15690xjKN1w7n6afVVtzpn1LOBNRpAnZ0VkSTLjQJ4is3aQbBlbFs4NRPkVtjNSpjJSB9JROPM59JsznWmJyOV4TgWLNqRxp8Y+dyWImmfKxNsH81wf//aAAgBAQABBQL7pmQY5G82WPEOP0+GPkxP/sJmaVEpbiRFMo37SM1Ini+jwx8mIX358igsktzIQs8iSxrc5H4LglQ30+9KKKKKPEHyYhfc2eTn3uPY8hB/jhHDLK8XiUfi6y+GTUsY49TRie42Gw2mTo8MfJiF93m5dkWS+KxRt5FbxY6FrlxqQofjcltcfi09YR3SUEh8mIX3edl3TiiUtz8aJH3FiZejR5MOsytIhIT0UqeGdj5MQvtzT2xXyeV7SCMa2qBFCWsskYjzQmUIiR0yKjxHY+TEL7f+ozqC+Km7MUbb9QkkLPAWVM3GXNIeWKeLzkzyFTyqpREIlHceLDaPkxC+3zJb8maVKJ4i7zP4vYhTgR6MPyM8G1HxHePw4yfkYrhk7UBC0xMfJiF9khyt53bieNGo+S+1jcjxsDgRwni/Fyxn4hJIaHDrGKRuRKR4o+TEL7PLlthLo9uCIKo5J7pYYohBEuiL7TsyycRZCya/qbBYz8Z+I8eND5SIi+zzWeQ+onjwMzqN28TISM2QecxZbT7J/Eg7M7/qZY9rXEPlIiL7PKfz8j348NzwxPMlSxkXRGXUsqPyoxZGzZKsWKVRMsryf+C1xD5SIi+tknbyHjwpRVHlfJbtpB2YnZl8fuGVIh5ArmbTPk/HF/yZWuIfKREX15H1JdLHvcOzI9sc3UPRhmRkb7FEjBEI6ea92WHc+GIfJkSP15n1mlS/ivFjZ5PS8iNRzRqSMeQTMcyLFMcrPJ/5fHXHGPlIRH680u/5OcrfjRqORXPMtzz9vaRRG0QkQkWRZ5cv6kYbeOIfKREj9UmTnbmyEbMX/HJd5FUcypJ0KCkQgihYzYRRLxYznngMssswsfKQiPv6fInSjIxwsUTH6Y5bzJCyMfjHRCFGz8Yo0M/EmT8UeGSMvxPGHykIj7+nypdwibqF0sbM89qxG08eNm2moWqIoiXRuFwzYY5SGJ42+TF9TZLtx+RaRvswGbsxRIR7wx2zyQPQkbeKHoxOyXJi+rPIocrJGLA2TmoFWN2RGqybbKsSK1orhOW0fRk5MX1eTHpQbFhFsgZfMbK7j2mqlH5Hk9PGVx9j4TjaxuyuuLFpZfL0ZWSyGTJRBty/FRJfHxZmRGN9+UjxJXBaXqutPXCSH0TLL0ssiLEflPyCykeEjJk7mY4pn5nFxTIRIOpPtL+Xk+/B/gtFrR6LN2rROJkXR0OSNyRdmCHeqIcMjJy0lIkrcURZk6cHYl35D78TqKf0Jd+9ZIa6lKRb0iePV0haohwysl7GjHjtylQ3UMkrjglcV7m7MIhcWucjyVUtEiKIR60QiHCcya09u/xRx9nkStN3i8P+OfJRGR47PyiyMxyvTcX9ElZ5cNERQiElUpaoh60yvpjH8ViXeWe5x6WeRidxwKoZ8tvGzB/BQEkbRMR6LL1vSyzyV8aEhaYxC0RD1pkdkkKJN7m31XcpUOVvxYmfJsW4sh1jjKjdYnrYpFlllll6NWNULWJ71Rj9aNjkSmRQz95JEY2Y/gszt33hjuc/REiITLL1sssvXIvlqhaox+ifrIyiREZY/kY40SyEYbz9+OtukZJa3puLHrfCLszLvXFGytUYvRkfUuyDszdyoyDEkTlp4qoy4fnJkBjYhdi1sRYhMekTMutcUq0sssw+jLKiXQpUdSbRkJa/vC6PJ/jjlccTJ9P3pj6LELVC71Yiata4aJZFqmYH0Z2NtjhZXdk0iSL0RjZ5K+OGHwhCia7rpIsRDT3pZtovRejcZI8IxsvXxfRm91tGqEtH8TaSGS94oH4bFUSUxWejdpBcItjpFobH0sen6fa1i64eL/FknZ0hSaGuv1P3RL2LGb9p+Vs3Fkp0pOxKxRFpQo2Jk/djJesbP3LT5G5n5D8nDxfWZ9WezbpVpQaHDaZCCJzobPSH6fZjx0KlpZWiVCjtHpRkIMTsQtKKNpRtNh43rMTZRGXVjbL0krII/a70QhR1S0UStdpWk5dxEKVi47DaUYjL3KXqHZJi7NxKG4mftjQ2R7IISEVZVFULXoXelaT/AJzjWl1y/9oACAEDEAE/AeaNxbFkFK+D4P6EUfj/ANGwqjcbjdxf044jRtKsX9tErK+tLSOm0r/KJ6J1xf0RR/qyF/tDlRS/SJrSxcH9CMZtJRsijIiiharmj96YWNlv/wBS69//AAkx/ZEQyL2sUrLGiWq4PkuGMRInquD4rjB0XoxocBfTFaIYyPKS+mJRY9FyfBvikUPWPPabCXQ9HpBaSHoiKK5Islq9IHsoeiI/Q3o9JaJFVpRIiR4UVo9XpIRRerEIQ/qyEPYuD0ihI9a3q9GUZCGqejERRu1esuG8kyPVcHpt0sbG9UMlr//aAAgBAhABPwHnM2GxDxIlGuEfX2Nl0b/9m8crHEo2i9cFzek5Ckbhj9WJjlVF2uC5zZ6GehTL/wAEP2tGrIqlwXP2ybIr/NE6/TIw6Ff9z9lcWLlL0Ik7MhuIzolIUrRfFi5ZBukR9mVEUKBJWJC5LlkJsiiS3IlGtFIXNcpdj0ROQxC5Mjxm6Wj0RJWUURKHEXrVifHLIQxCJIUdEtGJ6vlk96VZHn7PWjLIxssWjG9I/S1Y5UbzdZjf60jpldLRCejY2KVi4zWiQlWkdMrF0WR0aGdCZuL0sfYkUQ0iMlLW6IE9UxMs3CE9YLSJL0X2MWnoffZQ9EWLRD0j60xmX0Pgz9DY3quzbqtFpD2Zn+uDEMZWq6Gf3IvjjJ92f51Yh6UJCWr0j3r/AP/aAAgBAQEGPwLxjStLwB1OLfaD+BE9hdHqPwpz3jJTXULk+N1MGhRo5VjRNxTY3aS2v3WidGs+SFLKWMJyg3rDitMq9GjjGzWsAFSV6/kItR9V9VLqKZAi41jhm7UYuhqVOdQssvunMytkDi6VLMpoEoDIIqbV6QypHFFbB4hGxpjNHEgI6n2gLM6EeyfPE7BNkGjxW+kTT0qTJ6RJeB1Q0xJPySMTFk4TGigw+6nAngboBNiSmQRNlRHYB8Xqagsf8J8VtB1RTJ6l1ThDI4rpCMOpHWDpxfW6i+yogYklOmTQpaKlDgLewkrsOwvWvtA7Ldbgoj5NDb2QsmKbBklaQYSCJRTlbF/VNqyBVEVdKzdxgt054EPdOZICDZIHgrVz6Ib2j4TJZqVyeJC6tjaMmOE1RU0W7JuREjyofLrR8JO9N7CFILb8w4WwXJwcrYap0UVwuVS28DbJfO6FLNCB1TW5tnhwmT9yt1wT+Aj5SFyvnZD1RX6tgcATwnhumVOj5UNUfSBMMoX4mUNlvD+oRVPWSbhbVJzxpjvWbLAG0Fd4EaQ6tJfuN+KdHWxJ7IeDncIWkqrWoRsOUOYyjyjVlKLxezBzqZlHW6rNbVjUFQ4B+1yZGHEJIGGlR8XpFkTnbtYF7TKoe9U4BrYhbQaA6ZZqVS+rrDe9ey3sHsP/2gAIAQECAT8h/NYX4VrcabdxpoHZDFl60Iz84Xgx4NgJ/ntF1sbsCZf4uRx0l+ENXn2G+aU7FFaNENR6EJCRmwvBj9FcvzuLdFqxrG382FRTm/CEUCZm+pZIo2XhVJdZRyNxY/PoUVh5vRY/R3fmgODBfkqeXyTOllbdiHVnktWsi+dhWQi4DHIaQtNf2bgXWj/RlCAIIItkFamdfRY/R3fmpq0V8jePd2RaLu7Io04WXyxSLDI2LWmh9dWuP5ckXy9jpGTIQxdSxacLwY/R3L8rJBZUvkr1tXyfot1nl7nfOFwip2+IrGTwXqI0vU4yGkoYDdMMd6Nj9Hcvy7MmyTXf9shba7mOa3ZGLT3eiKoJotghM1ROthxbs5X6JJxoMMIe8lZ6LH6O5flhku/sLziXCzfcjQeGdEXpFXUSC2ORyKtPLZEq5F0G9K8CaaQn8MkN6/v0KBAx0wvBj9HcvyMhch5v+j7GYswVWheSJH+aILqsdyfCS6sjFxA0BEILM5U1DW65BfxLshTkr1r5PseGWoXBJM8LGMY8e9fkaEzeAj4IDQLU3EPoOWNUWnySNVOaNTcSlEtrLRcZwVKyZMQzQspgQ6OdJGhQ8hGotYXkx5bxsY/R3r8m6HTuNQspnLt93JrPOpNHUh2WfQkepnEaMRIRo0RjcELZWfSa/WXJo8FGAueB4v0F6/JPvvwjskuBXO/siRt9oQa2rxmOb9uRpYLUqdSovgbQJXVEuREkhfrejRMg2HsIL179BeufxslbaS5Z0yupkBp8ECb1oiZX0ivrUoCORnGkadRqk0SUdE0p3JhkZ3cwhYSJTk77KnwNzJdsCwvwvF+gvXP43hM5kb+BVLV/fBskwUC0Ox/JGKVWQNxCSIXvTVOosUmE1lZlGCmtU+KjNzey4RaayeRb9icJItWAkIvwvF+gvXP4434HLWZG5Ffj9siyLLADqWhptGaITNRDmJd0mZRLAdEN2MN279kJM9H7D9F2F4v0Vy5/EzrGUlAkTW6ffkahvTkiBIdPYoNXDQxBHgnheHuys9XpvwvB+luX4mWOg1Udh9rIU76oRbJKX8EJkTrxmNLrb7ZeCuqt7FXfAN1YCwkPBEVpOVyvTdheDH6C5c/igRNJZkUdQmMyxun7shm0SJjn7LEjqmWjqLUiyYNEIouIx5j09piiipvcjakJJxGVhIxHEkeF4MY8W1+Fs6sQIW1LsjhOv3YsaJFlrRInaUjsRuM9mTu9PgWGopHkREw/piQKKQTrAKm1sO5RnPOwyvHbVoPPosY8VoT8EjJ4E6f2TcG+/WLIlVrvILmJt8rCB8rQfmxVTQCkZrPQJ+JXc0I5VD2kXDKXBMTYlKnBDWC6y1ZkyWyevoseNSPwSRIjqod2QtRHp3zY3f6H3MR7bdOEPwQQTaSnsdidFHuSmhuh/wBKehI1DZl9SQQXFSJG4dvkIaR8Kypb0Bj/ABzERqLSgSPMU8m7GPGXgeXCt5fdB7aZEc3dB9JkOFmrvuJD+1kSH9Uk/DEioHK3v4w1JDnOvuUevUpIE9B4ZiqZWX1AuazxY/xjwkXZj2zGKra5OC6v8eRRkzbKte5Jo15nxXyhoorKvuiS0akRbhJrlWF4T7lGPSdvfAqQJjIvwW7o8Cf7jPBqdIm2Q8GMnEjEn0vsGyvYion1Odur1EI5bj+2Fl4q1GbmqGNV6KvDsUOPwNGetCn4Qh7jNdJJN0wHSHEr7UV2DvyaHYdLWdiacxoRfkhcL5kmryUPkYYbws1uCgJiY6RpXohDkkY2KUTb3EnqKqElNVA3yydWry6ZkWg20bS28J+8BR0vc+hk5koVaEw09SYiBhamU2RVljISJLNC4bFCcBRoPqLhjQsFqWeimyoS3LGk1V7+mZD0FZspE3JGW/ksC8M8CeF4CZmsEzXUaGpLjLBaSTPVydlqhBtN2cEmZG4iV8FFVDSJieGz0PdChRqEx1xsSySX7FOlyS+n9OaanrYQdkTfKoyYaN+xBO3lU5d4XWhe9CgdtrInXwZEkzzhIRSg5GhEYJByquCJCEdAsiMDFuLcIuXSPoxuUxEHUxK1v1izry4GtSz4H+jYqJZrlNR8jV/Vi11q+EK+eFL71IXnhk1s8hrMr/whPVEsQrJJGRhOEY9qYkJgqOCtCEWGr6J6oIpUqn7iT1ElM1DqVz5+yHbeh1NPTMlb1Qn0ql+zr96onGqnAuPa35LjfPRWH52Y5ufAld9RTn2OYNNBMbBBskoJxJXjWcUgh6iK+CfTpDzgVSpvMUqur00L5axFh9I+MnR/oPY+tkq2YcMShOA4UhLuJPrTsLT2RsigDKEipiGGFgLAnMUjRKa0YohDQxSJEPiNwiFTJpFCCVBBO7QovWp8ZDKNzqR7Hkqdz9gxS1+RktKCI0Hd11GUDOL0MsQRVC2xVYW4Y3kjqsMQhYGhC9KeskgrjrhZXHgoSHiRxfuOmku3RaF45Wz65CURdyDK7gvuE5RQHfI0dgmSs6k56EB0qBqEyThQkSdERy1xRdFAmSPiOVFyVC6K5EwGVJzZDzTRCQnQsrYWcqo5qj5GVD19kIdjKvuXSqlktFgVdb4DwO7BnWWXqWoOSGGKpWhZlORhug9CZHo8UWw6iwkWowoCbys/kvE4Ik2FVm2hUkhIoLMdVwLM8hqcjVqbgx+jiVbT+EiWqcC2RJNTI/cDxahzvsaytcDsgQk0RC5a4txjbD5a4AdMJKMu4nYgkSSJhWWxTXlUsGYoULUoJ4iJkY5EDjkT5ErXIl5ZIq2Nj0q8tjO51GumwuZNeTPvs4GqsxqPuJqG+GwV1rJsoKhyOMxyVhMrg1GvFT/SLWojFjjceFnC6/tC4apWw/ldcMjU5Ey9kNVmVeyY1quknYewafBKjWo3rA7NnuXzjIkjusdpcff0TPSbrUcm1bgRYPlC11wjOxfFM5iXjaw2kFnI1DaQlDN3YvRIIIJ+E4WBoqSpE7jmnvkbyTC5JkaEdooZJTKUcWqUtTelrIW6yQ1aFYESy6QlQU2sB+JSpeZFalEnXZj2TuiDITMmftiWzLCy+BDah0y6Cpy0ryV3GujzlQUqqwlL8CdHwSmRtEtBFLG2QPvQUNoGk7rLnusyEtw9A7k3K0iGEQrEpjrcXEmeRMa0HvlioISJtIm+Qwqt3YtENyKlONoLpERHqNZI8vcSrW9+C5vUaEsG2GfARY0QIkSeMkB02k3uKhJLqUpu5JDZTaRxorvUgrqV3OF4G25cyiRuQ128jUtNyTUfUQqSJnJtqZpYqSPYSmnZ64CpF7C8DqmSKl3nMg7AXNDwiANf0xIYVghDYSw4/g97eUysmJecNW/0bJvRD53STIVVVGvJCcMlWRrJZlWRe4lgLMEla77C4MBECKkzT6kUXwTLVwM6pGoYoqbSJTe5pbDIdw3Y2CSSScP/2gAMAwECAhIDEgAAEFaANZPdcP5Zj6b6Jpc32FfDAKXgKKDuNcjHRI9xhkffQe3TEOjHn8AworxRnefQBzVYXBKMaeMgnkTQHTafe2YWPunQEOZFDZaFdxM0WSas0OTN8yFaj7+AXu0QdEWs3pw4MWBzdxd17KQKHDIFmewujysQZeQ3EjENNK5CbkWa7xdlE50EKpUSdBO/q3fcVDTQudpOIXddX7ofccD18RCc+XEUyLYKVlLHiutvP2vsUG39+bfuqtKQvsdG6yiaMSQmZ2MpG7W6PTxKOs3669z68Q7KUDFBRLk0rKyKILdQNgN1YRpIN/dJVXm6bXwEW2HMF2joyQJcUQZzFGNavqLNmkEkUhQfEgpmtTh1GgSn+3IaLAC59qcgUlmG1B3XL69MdQIdpXndwfmJov/aAAgBAxIBPxAeCIxYegWsMzqIsHgy5+kh+iMEFIsr0HMT3+gTLxRmF6kpFhS4GiR2LpDUEJihRiGIeYsH6ZXKexezHM4z0molZHgG5bFgjML1KiwMpUjtsaUtIJ3JD7hQGx+gRm9SyNhKFXc54JEQ76kNORiGnpHn6lqIZdDuosQp6wOCF3uhLKnRWQm+6jVeCHgh5+pMLYRGJD26lM8v9egxCM3qpxmGJNmUDJlo0TgYhFj9Ky/RmUwy5yYhKPijrjWDXrkxH8EzhOOdrghD9NmCgqHhXpqnGSEgawSnDeNAmN/RULeJUXehIxOB8tRIPgTAo9LGwVYRjWB1Qupq9FnKkEeh4DZdigmKFMx2KizBQOo0PTEYg/QUraLfYVCWiLkCzJTQeX6CBvBjwdymglBA2lDyIZmHV0IqjGQhcdMbo2LQkYsLBbsot5+0xNRJEwHAcssVT4EK6FqOzGSxyJsI60uWEzNgsxYSYEuHUeWVDQngkf/aAAgBAhIBPxD1oJXc2RizgZevRbwYxfgzBltHAWYieBYQYxmT0vB4WFbgWsLRUrgJMISyIYxmT11IHQVdzcsDna1jAKhHIlDwZk/AUjWDWGSI80yS4ThGXCQrDxZfU0MZyQJBxO5GTKtpoRD0aEExWHiy+p4XLwGrBJbabgRItKFKPtDKIVsWZfU0tbYFrAJWCEqHwQsFbBjMvpY0hPYsWG0VC4ZJFbB4LlyvTIEjYNCwyKTNEMiAjUowPBBHoZaQ0jlS9AIxKCk08vYeDC9MHInASgn6ZGh9cYmH24HnBoTJ3hQSTA74RJbBPCUlB7RWqIiWwbxZpcicNQbwoRdA2KEUuKjwkJT0ZGanpDcTgVgTgoc4CDU4xtCeFMiKBdhdS2DuYzPAiGxECnUkvHhin3GZ6vFNGCoWBUGLxJENUWpBQktFRqjwU1r9oMTIEFSoRhKpbCouyRVRoIITXGqrqZXthA1sDjYri0eRq+47MUhOqwgqXDS7SygThk9FLBWsOgtBOCotsJP/2gAIAQECAT8QXpXoQvReHFoycdn7G6O4JJzble6i/hYRgkJCCehD9LTFZcr0oWC9bD74y/vazZkKx0BTPopf3c3It0TzZjtbg90yKq3ncgltW1zhEECQmIJHXjPEY1MPkIXoQsV6ZHo7ZmQkbrZ7ck3HqKWPi3GKbl7LfVi4pJrZvpqKjCvK8CvkouDkKRyR2LJkchl8GK8ZoTicaNFAfzwMbGwSWDFjn8K9KlbdEqn7VZ+3sK9SHJ9ZFDIPqI0vLGF8iXT22I+ktOESCXgmR0/qFJNE+1VkcyrioHcSIEkSLjdLAY8Rlg41HK/ChCwbJl0ctGbt7laOb3MbR793chCV/ZXPvML2KOCpCQQT8kygan8vwDOLt2sTS0ClMgNCZpOI63EY2K0znkL8rEOV7pfzp0Jp6iy/gGNs8hmL+T3BFmdS6IgWHIJtjCm1XszM6j7k/OXyMUCcrR7sqj1y5jAx+gtYp5i9C/Ch1+kX7Gf6pl8sx+xMN5mhKs2RcBnh5b5ZMlhLISEs8y69jTKE1huplm7hXCsNdn4uUMGtEY2H9TAx4GwteHzFhOCxWKwbJEWMbVfoVzD4Jipmje4p+8CON7kCGd6IU2pyQ0ctGXCJCBNbAX+ravg4sdAgaji1T9hjXMvMKknjrlGUSaYjGwNj0HPMXrXokYz2Xpuq+tBDu3LX7ImfV/4Sf7oVPhgpWpU5NkcgGehvrQq6ckwZtPOCEmsDwDKsKxa0BSNBoWkQnb2OhlIJiBQFtjAw3oD0w+QsF+KfaIbm/mPhA5G7P9KL79oaqV/r4PpS+ypA6L2hCUMto2XO7taSAJaUdNn2EiStwXWlcc9HsRKCNbO4rYo3CFuM0acaYQqBIZmuB+gOpbh85etP0SNhuEx9z6IXrN9hlI+iIG6jhvj5FuKI10LUex/xkuw4pRv4IqcBttAlIiHoKS9h7N3uiwsUIpZWpdCE062p/NUI1YjVi1mNYZvCw2PAywY8pYLBYz6JKPzn7nwjn/vepX3o4CjlJ8VSLlry8govX3fo7S+SncQFUp7CGg3wnuJjENzDHdrND0aoNeiSUIVUVPP8YCiQsNjDGx4GywYftBC/C4x5fKN+7RBwWR7w1DS2+r5KR+wWhWC1XD9seU7hTNpfX+FSCE8Y3XsVKH4DoLLNuawifYiQtVqmJDFknVdEiCcCbn7C/A2oHKwOJlzEY8LLHg8cIT9KFjINET3Ze3eQ89V7x8UEY8hJ+O7EQ7VPhf0mzxCRo2+i+6EVWivI89In3VKiPgrKB12FxitpzEjuE63LRPfW5Y0pSolCE5xo60ez2HGH8iwtlcUcBPRTGXYWGY8cITwT9CwZ1qOJnjUuJPL5KU37vYylN0z/AEcJ0+PLH+gmtRqYKFNlphQyGfXIFIhPgcrjoJp+bZA2u+yDS8IEvRTHgZaMeG/AsGI3SupI14KbZGry5fLir4FB6TfVJCFRTRDXJ5JF0h9FXyPobp3y1JNKoQQqBtGiMmjIVzUDlhWzFSsoR4E+cEsF6KeBjZYOeWsFgsE8ZGJYck9WKlr39GO0aaS0Sg8Gc9jmP1U2JQEISVKQFH/U3/Yxwsl0JZlrQc+CnuPjTZ1HyTpCpIr0aopK0XzddCw2J+kniMsGPHYLBYL0Shntar2sd+nPqLSB1Cv6QV/Il/ka4tPo39EwVi+lhnhsiMhB+mfYoG6txeiGrII1Msk3RwQgcukM/wCAyIVJYD78CwyUGG9IsweShEiF6hD1MMfTNku7Jb9Ov2La4b+uir6CKJZkK7svkRHtU6mQ7Oh0fg2QT8vA27qXZj9xLRQl8Lj2aeRSkjGo42F3KR8tw5RpUTtKa2Q1WTUOEwrSolJHLVQORvV4XibBZhmDFghekxE1uKsiz1p9e43pZF1lwGUGmtst/Myi5USEnV7CNKMqTRI6txyv9rMqaDz+ZJHtK+xoOK1bDZtuMkkhJp2OBpnpoV0uRqKLlJdNxKLKMqGnM32L5kQsh0c8jxW7N9vgY8RlozAsF6GxdRINuFA1nZQpyynRCvI408LUTyLdK/RCEqKWsZ8fIdeiexRBZ2e2DK5Znw/bhD6P03IUTuXJTsnk3l3VST/QJV7Ge4Yuj0VsxrtyRwZzhaotiuHQyxVkhWiCqqcslzKqhk2VdSj9SgsMY8R4siEL0aShDFo7A9NX2Ls3B9CEa1OiNfA9DnCejZPoIGUKZyf8zKU5VBZIs8mH2gW6nG8C4L+klb/Zujl4S/0EhoATtDnwUmhqhbKLwWd0Igd1nmIjhEutgosjsFrKDdkqikEVL4IuppBETrUPaRXKuFFdX/Qhxa92DxGW40L0LCxDma2t9iWPYp9sKWk6oFp19ZbWdTfGVWgTPZLIixVQ3iuishDDpLCzudKCqf4S6Eir9wDeCgPi1OV7qIfuFfFxYSq7SaihoWarIv8Atcj6soRRGSHK9yrdqz5JWTs6llrIl1mqc6kBpdWejRYVx7ooHgYUmKKIpBIIrBDHuDiZ32FV3YVGzmoyJ7B8FFWdZs4DOoAmt+hXLcoHSEppUV8XLl/o7JlriEXKdxR+4FiVqv8Al7DUHbyLTU/VC0jhO3RkZ2KGeiHoJKpxWRFFyGk6ihrrcONBUt6q+ozohpUZLD1p2NRE7JEJ06VISSmeVVRPyLFmYm6+BRtIoIB4pmxBmktyiah5hq1zsIepFNy07ZkJIoe43HK3sk3lDEwLA4aNvCdKD2FWs0Tc8knrcOpvRbA4BOjt4GTfoOK7oRN8SosW6zmOZWpcdUSTloQoTmKhNGw1NqcimkkH3K0AxQrdwNBqzRGhtEtUUOkhU7qEQKJCIFnGSLTScbuB97uxNMcQqRkSJnNT+zJQpaf8JFrDYvC8nA1fsS5D0PXbofR1hjHHVF0FvYVvL5KNr7JXW9B8CaWVMq4m6dsBrJsGL5b+RKKVdXRA1DRUya2aJ4JMWRrgkToRjkfPuWV3HNU2N0M4/cTu7dxpIZXeot5ELAmLkW8WLGqtM9SaGrocRHojSXKE+5wk17EOvmo/WfsJGafUHI3xhBkN/wBMhrAL5klszyMKEre0QoE2lZcCXGo2X5ImTo9nMMWf6mOhlo1IdpqiATbKhpplR8ZDWkpjUpUZDkXRO5ND0dwnXGFQgqRix2Bos4zDeSKkEMr2IiLp/NBirWoVwfoihmoT6vsEm99vrQoJdAAPaLhPJyG1snjwFR3+sP0Xy75HbrIqF0Feg503HmJrcmr/AHBlZOxE7oUz18MXEaW1X7M1CmrChL2wrtw+lhNw66kaRu72wZ8CBp6MUK5EwqiRTcljGJZr8Dp8277Cyiiw+UI+Vg3whC3FxnMjXRoSPtMfSCH9a4eSFax3EyslfAqfdxz1Ud2vxAjMOnDNO24jYvIgCqfduRNRaaKvwxSzJNVTl8FJOD81K7R0FtSYecSjXUnp9udTwJ49iwfImJFVZ2TFLNyOQu/NJ2OosLAKNokSbZjDkxarktY6DQotrjSgkuDttAle2pbkxmj4RZP9ketdsuQ2krt+4uhRJ208koG1NfB/CXWAMn9eFtvoiUkYhlKWRatW2ZLNCOsKPGrXMWWdFmLJrJiRPJav2Y9bb0rfybG0ROIrNxL+2EKzkgnuOVk+MmSKvVaFD12LQ9Wafk3lF2IxRCOYlRCDMqIejgZOPREs0G22ZOS8EDpNb6k0tmiSvHgmVtQyAYabk+9hUhZlYe1ynvuFJN2hoK23b9Kola45Ejc5mq3EKkPy7mYqvRzoVDoNGfS1Wj2LiVIqRPZrySbVPcSdXVuOsrdSRXLYrJy1lyfwzQot05qLazRFpz8CwNguQlKVxBIuQ8pxhFDd0Ubjb1YOWQSW4uTGnQetVbPqbTmh0tlPQkv0Mlk+I/hLzYW01e7JIJ7cE9FYTwD7EjjqR/Ykp4rLcpb19v4xlpOqPko2hGuUEsqjnVCRU2xRodKhXdUWenItISFK6Cdj9hxzNromqzDRBJu1eTvIFOtk/ccat0zKrLIRORI7EiY4hJDujBOVUNRxhTeZqEaZy1eM2Id0kNPcYaRpTjRFmh+0W7BtxLX32HUrmiuxzYpO3XgQFBLqzY1lr80K5vGvYXyS2im/PYhasSo+lSep4uqEG4so2aK/MeREO0DjUnfQUVY4QnF2R7idFEX3TEs59xqvmvYQ3RzPZcjKDE9SkVRKPUilvoSbtBMGRD/oJCQotpZjpMBYSbiGOpxNRGmtrVk7o2INYT7oVa64RmlwolhOwPdFS6pkpsPC3P8AwXkY4ijuQLPwLU2aVfMcSosFRstBWihp+g6Wy7XyMLlq0qJO9cxOlHn1L5Sz0Dk/rHmWXuISlzkh5r6judh70Fq4KxTN4D12U76MrpfIqxdlGpVVis5FQ9L75CSad1QTEWWhFwCgNUJMXxhlHV0knGRsWmhMRkoTDz1ciLBRmdjKzTWlszMIgc/NPUQ+ZWiw4O1AlSsb/B7Stgcpq1BarLyIcmxjF6vYug4RG+vQRcWa1TUkmO7MLNNDHxDW7PWIOU5qU+pMWyFFXWiCoNdhI8uomaFWY/wNgfYZk1iuwiziRLFX7hVVOruakLRz5wQKSMIeJMgTt4NQOZpGgo1jT5ApcNtXTpmCpTU6t85CWRbHECa1S+1F2Jy3XKKJp9RVIUq3VgjKuRBdp/wICzMtJw+ofSDJuCRN9DRaDaZt90IuEusiMNFAj7fsbVLJGZQrOHuIUKJayd1yMJEo+yETCy1Gjoo4GqYj5PqFWScJpeLoixRRIIYuXoz5C2CTwSG2slJKond+5LRZLryiRyayqSYmtpq1+RUk0kqX5FdwBquQNqYT7genuFe5TaosUTYdyA/dS7r+RnYtLvqTVysX3MkpDexTURSQ16m4VMwV4QOeBv7CChWTnMabfluKGMy+qHUJzXNNRUIWKFbNURGcRoGSiSyEN5yU9jcvnoNoqM68ij3KSashCh5tQZEd3NZhGmA0NDdsjkwVFFWfUcT0FWA2ZS1Uh7nDc1tnOsE6ISTur3nqOmCromMthJis3pnqMZZIXy3Qi52RvoIPp/gz1Jr9kjSjKeskBZKJlFrjW8F8t9CFS6EOqKaM+qI5KZ8hUzPN1t/o6azh0mNS/sd1dCRCqOXTsTGyEWFipeAkdw0tsNoshidC4VUX3HlBnGZMWEMbsh6Q9FYCdjYcpEIxJOGryH7Se2dmWK5Ju3p0Kq50iWSVcTEqh1k6W2FSSkeZEC1DVC05ik0dwbrB95EeKVYWlUFCxRCdFIRq6E6CUoqVmjQPca8s0ew+VmoJnLy+2F0ZkFRxNkuXBKVSZFJTYoA5XBQcPUyuf2JK1rI2aYEsbI7aYwQJAlDUjFaOik7CWjL5hr1zoJq6QlPIlvaWxM2ElbVcJcQ0095tWVn0I01FTz13FYShPUz5Eu3CWe4116TZLLP9D20Yv2z9iDRnehKpkrGS6j0oJkWloLMJpaS7qRxNvKwkIhzVCpkIqujIVkv6IluhYKjLsQCa6LIkJUtZu3+i2ZCxSLIFbbQkGi75BLVczchKqHZtFKpn6FJ//9k=" alt="Dra. Sâmara Miranda Loschi" onerror="this.parentElement.style.background='linear-gradient(160deg,#f5ede9,#e8b4ac)'">
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="container">
+    <div class="servicos-header fade-in">
+      <div class="section-label" style="justify-content:center">Especialidades</div>
+      <h2 class="section-title">Como posso te ajudar?</h2>
+      <p>Atendimento completo para a saúde da mulher, do preventivo ao acompanhamento especializado.</p>
+    </div>
+    <div class="servicos-grid">
+      <div class="servico-card fade-in">
+        <div class="servico-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Consulta ginecológica</h3>
+        <p>Preventivo, exames de rotina e orientações para manter sua saúde em dia.</p>
+      </div>
+      <div class="servico-card fade-in">
+        <div class="servico-icon">
+          <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Pré-natal</h3>
+        <p>Acompanhamento completo da gestação com atenção e segurança para você e seu bebê.</p>
+      </div>
+      <div class="servico-card fade-in">
+        <div class="servico-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Anticoncepção</h3>
+        <p>Orientação sobre métodos contraceptivos para você escolher com segurança e confiança.</p>
+      </div>
+      <div class="servico-card fade-in">
+        <div class="servico-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>DIU e implante</h3>
+        <p>Inserção de DIU de cobre, hormonal e implante subdérmico com procedimento seguro.</p>
+      </div>
+      <div class="servico-card fade-in">
+        <div class="servico-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Menopausa e reposição</h3>
+        <p>Cuidado especializado nessa fase com foco em qualidade de vida e bem-estar.</p>
+      </div>
+      <div class="servico-card fade-in">
+        <div class="servico-icon">
+          <svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.82V15.18a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Teleconsulta</h3>
+        <p>Consulta online para quando você não puder comparecer presencialmente.</p>
+      </div>
+    </div>
+    <div class="section-cta">
+      <a href="https://api.whatsapp.com/send?phone=5532998089136" target="_blank" class="wpp-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-text fade-in">
+        <div class="section-label">Sobre a médica</div>
+        <h2 class="section-title">Quem é a Dra. Sâmara?</h2>
+        <p>Médica ginecologista e obstetra formada pela Universidade Federal de Juiz de Fora, com foco na saúde integral da mulher em todas as fases da vida.</p>
+        <p>Mais do que uma consulta, oferece um atendimento onde você se sente ouvida, acolhida e bem orientada do preventivo de rotina ao acompanhamento na gestação.</p>
+        <p>Atende em dois consultórios em Barbacena e também por teleconsulta, para quando você não puder comparecer presencialmente.</p>
+        <div class="sobre-stats">
+          <div class="stat">
+            <span class="stat-num">180+</span>
+            <span class="stat-label">Avaliações 5 estrelas</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Consultórios em Barbacena</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">UFJF</span>
+            <span class="stat-label">Formação médica</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Atendimento humanizado</span>
+          </div>
+        </div>
+        <div class="section-cta" style="justify-content:flex-start;margin-top:32px">
+          <a href="https://api.whatsapp.com/send?phone=5532998089136" target="_blank" class="wpp-btn wpp-btn-outline">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="sobre-visual fade-in">
+        <img src="data:image/jpeg;base64,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" alt="Dra. Sâmara" onerror="this.style.display='none'">
+        <div class="sobre-visual-tag">
+          <p><strong>Ginecologista e Obstetra</strong><br>CRM MG 74732 · RQE Nº 54019<br>Saúde da mulher em todas as fases</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="container">
+    <div class="depo-header fade-in">
+      <div class="section-label" style="justify-content:center">Avaliações verificadas</div>
+      <h2 class="section-title">O que dizem as pacientes</h2>
+    </div>
+    <div class="depo-grid">
+      <div class="depo-card fade-in">
+        <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="depo-text">"Uma excelente pessoa como ser humana e profissional. Muito atenciosa, cuidadosa, dedicada trata a gente com maior cuidado e carinho."</p>
+        <div class="depo-author">
+          <div class="depo-avatar">TL</div>
+          <div>
+            <div class="depo-name">Tayanara Lourenço</div>
+            <div class="depo-verified">✓ Consulta verificada · Doctoralia</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card fade-in">
+        <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="depo-text">"Primeira consulta com a Dra. Sâmara. Muito atenciosa e esclareceu todas as dúvidas!"</p>
+        <div class="depo-author">
+          <div class="depo-avatar">ML</div>
+          <div>
+            <div class="depo-name">Maria de Lourdes Oliveira</div>
+            <div class="depo-verified">✓ Consulta verificada · Doctoralia</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card fade-in">
+        <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="depo-text">"A doutora é atenciosa, profissional e esclareceu tudo que eu precisava saber. Com certeza vou indicá-la a todas as minhas amigas. O atendimento desde a recepção é acolhedor."</p>
+        <div class="depo-author">
+          <div class="depo-avatar">CV</div>
+          <div>
+            <div class="depo-name">Claudia Valeriano Mendes</div>
+            <div class="depo-verified">✓ Consulta verificada · Doctoralia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta">
+      <a href="https://api.whatsapp.com/send?phone=5532998089136" target="_blank" class="wpp-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quero agendar minha consulta
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section id="localizacao">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;margin-bottom:52px">
+      <div class="section-label" style="justify-content:center">Consultórios</div>
+      <h2 class="section-title">Onde me encontrar</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card fade-in">
+        <h3>IMED Barbacena</h3>
+        <div class="loc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span>R. Presidente Kennedy, 634 Centro, Barbacena MG</span>
+        </div>
+        <div class="loc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>(32) 3333-0425</span>
+        </div>
+        <div class="loc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Seg a Sex consulte disponibilidade</span>
+        </div>
+      </div>
+      <div class="loc-card fade-in">
+        <h3>Consultório Centro</h3>
+        <div class="loc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span>Av. Pereira Teixeira, 86 Centro, Barbacena MG</span>
+        </div>
+        <div class="loc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>(32) 3333-0425</span>
+        </div>
+        <div class="loc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Seg a Sex consulte disponibilidade</span>
+        </div>
+      </div>
+      <div class="loc-tele fade-in">
+        <div class="section-label" style="justify-content:center">Atendimento online</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--text-dark);margin:8px 0">Teleconsulta disponível</h3>
+        <p style="font-size:14px;color:var(--text-mid);margin-top:8px">Para quando você não puder comparecer presencialmente atendimento online com a mesma atenção e cuidado.</p>
+      </div>
+    </div>
+    <div class="section-cta">
+      <a href="https://api.whatsapp.com/send?phone=5532998089136" target="_blank" class="wpp-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta-final">
+  <div class="container" style="text-align:center;position:relative;z-index:2">
+    <div class="section-label" style="justify-content:center;color:rgba(255,255,255,.4)">Agende agora</div>
+    <h2 class="section-title">Pronta para cuidar<br>da sua saúde?</h2>
+    <p>Atendimento presencial em Barbacena ou teleconsulta você escolhe.</p>
+    <a href="https://api.whatsapp.com/send?phone=5532998089136" target="_blank" class="wpp-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar com a Dra. Sâmara no WhatsApp
+    </a>
+    <div class="crm-final">CRM MG 74732 · RQE Nº 54019</div>
+  </div>
+</section>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
