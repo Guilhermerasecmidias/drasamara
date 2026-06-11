@@ -384,6 +384,30 @@ h1 em{font-style:italic;color:var(--rose)}
     aspect-ratio:3/4;
   }
 }
+
+/* ── ANIMAÇÕES MOBILE ── */
+@media(max-width:900px){
+
+  /* 5. Pulso barra WhatsApp */
+  @keyframes pulse-wpp{
+    0%,100%{box-shadow:0 -4px 16px rgba(200,132,122,.3)}
+    50%{box-shadow:0 -4px 32px rgba(200,132,122,.7),0 0 0 8px rgba(200,132,122,.15)}
+  }
+  .wpp-bar{animation:pulse-wpp 3s ease-in-out infinite}
+
+  /* 6. Transição suave entre seções */
+  section{transition:background .4s ease}
+  #hero{background:linear-gradient(180deg,var(--cream) 85%,var(--cream) 100%)}
+  #servicos{background:linear-gradient(180deg,var(--cream) 0%,var(--warm-white) 100%)}
+  #depoimentos{background:linear-gradient(180deg,var(--rose-light) 0%,var(--rose-light) 100%)}
+  #sobre{background:linear-gradient(180deg,var(--warm-white) 0%,var(--cream) 100%)}
+  #localizacao{background:linear-gradient(180deg,var(--cream) 0%,var(--warm-white) 100%)}
+  #cta-final{background:linear-gradient(180deg,var(--text-dark) 0%,#1a100e 100%)}
+
+  /* 4. Contador — estado inicial */
+  .stat-num[data-count]{opacity:0;transform:translateY(10px);transition:opacity .4s ease,transform .4s ease}
+  .stat-num[data-count].counted{opacity:1;transform:translateY(0)}
+}
 </style>
 </head>
 <body>
@@ -474,10 +498,10 @@ h1 em{font-style:italic;color:var(--rose)}
       <p>Médica formada pela Universidade Federal de Juiz de Fora com residência em ginecologia e obstetrícia pelo Hospital Universitário da UFJF. Atende mulheres desde a adolescência até a menopausa, com foco na saúde integral feminina em todas as suas fases.</p>
       <p>Acredita que cada mulher possui uma história única e merece ser ouvida com atenção. Por isso, oferece uma experiência médica marcada pela confiança, proximidade e cuidado genuíno em cada consulta.</p>
       <div class="sobre-stats">
-        <div class="stat"><div class="stat-num">180+</div><div class="stat-label">Avaliações 5 estrelas</div></div>
-        <div class="stat"><div class="stat-num">UFJF</div><div class="stat-label">Formação médica</div></div>
-        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Humanizado</div></div>
-        <div class="stat"><div class="stat-num">Barbacena</div><div class="stat-label">Presencial</div></div>
+        <div class="stat"><div class="stat-num" data-count="180" data-suffix="+">180+</div><div class="stat-label">Avaliações 5 estrelas</div></div>
+        <div class="stat"><div class="stat-num" data-count="0" data-text="UFJF">UFJF</div><div class="stat-label">Formação médica</div></div>
+        <div class="stat"><div class="stat-num" data-count="100" data-suffix="%">100%</div><div class="stat-label">Humanizado</div></div>
+        <div class="stat"><div class="stat-num" data-count="0" data-text="Barbacena">Barbacena</div><div class="stat-label">Presencial</div></div>
       </div>
     </div>
   </div>
@@ -513,9 +537,6 @@ h1 em{font-style:italic;color:var(--rose)}
 <!-- CTA FINAL -->
 <section id="cta-final">
   <div class="container" style="position:relative;z-index:2">
-    <div style="margin-bottom:24px">
-      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDEwMDAiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9Im5vbmUiIC8+CiAgCiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImRvdXJhZG8tcHJpbmNpcGFsIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0I4OTc0MiIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIzMCUiIHN0b3AtY29sb3I9IiNERUMzNzMiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjRjNFNUEyIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI0RFQzM3MyIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOTY3NzMxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIAogICAgPGxpbmVhckdyYWRpZW50IGlkPSJkb3VyYWRvLWZ1bmRvIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0VBRENCMyIgc3RvcC1vcGFjaXR5PSIwLjE1IiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDMkE4NjIiIHN0b3Atb3BhY2l0eT0iMC4wOCIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgoKICA8ZyBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZG91cmFkby1mdW5kbykiIHN0cm9rZS13aWR0aD0iMiI+CiAgICA8cGF0aCBkPSJNIC01MCwxMDAgQyA1MCwyMDAgMTUwLDUwIDE1MCwyMDAgQyAxNTAsMzUwIDUwLDQ1MCAxNTAsNjAwIEMgMjAwLDY3MCAxMjAsODAwIDUwLDkwMCIgLz4KICAgIDxwYXRoIGQ9Ik0gMTIwLDE1MCBDIDcwLDMwMCAxMDAsNTAwIDcwLDcwMCIgLz4KICAgIAogICAgPHBhdGggZD0iTSAxMDUwLDQ1MCBDIDk1MCw1NTAgODAwLDUwMCA3NTAsNjUwIEMgNzAwLDgwMCA4NTAsOTUwIDk1MCw4NTAiIC8+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MzAsIDQ3MCkgc2NhbGUoMC4xOCkiPgogICAgICA8cGF0aCBmaWxsPSJ1cmwoI2RvdXJhZG8tZnVuZG8pIiBzdHJva2U9Im5vbmUiIGQ9Ik0gMjUwLDUwIEMgMjcwLDEwMCAyMzAsMjAwIDI1MCwyODAgQyAyNzAsMjAwIDIzMCwxMDAgMjUwLDUwIFoiIC8+CiAgICAgIDxwYXRoIGZpbGw9InVybCgjZG91cmFkby1mdW5kbykiIHN0cm9rZT0ibm9uZSIgZD0iTSAyNTAsMjgwIEMgMzEwLDE4MCAzNzAsMTIwIDQwMCwxNjAgQyA0MzAsMjAwIDM1MCwyNjAgMjUwLDI4MCBaIiAvPgogICAgICA8cGF0aCBmaWxsPSJ1cmwoI2RvdXJhZG8tZnVuZG8pIiBzdHJva2U9Im5vbmUiIGQ9Ik0gMjUwLDI4MCBDIDE5MCwxODAgMTMwLDEyMCAxMDAsMTYwIEMgNzAsMjAwIDE1MCwyNjAgMjUwLDI4MCBaIiAvPgogICAgPC9nPgogIDwvZz4KCiAgPGcgZmlsbD0idXJsKCNkb3VyYWRvLXByaW5jaXBhbCkiPgogICAgPHBhdGggZD0iTSA1MDAsODAgQyA1MzUsMTcwIDQ2NSwzMTAgNTAwLDM1MCBDIDUzNSwzMTAgNDY1LDE3MCA1MDAsODAgWiIgLz4KICAgIDxwYXRoIGQ9Ik0gNTAwLDM1MCBDIDU4NSwyNTAgNjcwLDE5MCA3MDUsMjM1IEMgNzQwLDI4MCA2MjAsMzM1IDUwMCwzNTAgWiIgLz4KICAgIDxwYXRoIGQ9Ik0gNTAwLDM1MCBDIDQxNSwyNTAgMzMwCg==" alt="Dra. Sâmara Miranda Loschi" style="height:100px;object-fit:contain">
-    </div>
     <div class="section-label" style="justify-content:center;color:rgba(255,255,255,.4)">Agende agora</div>
     <h2 class="section-title">Pronta para cuidar<br>da sua saúde?</h2>
     <p>Atendimento presencial em Barbacena ou teleconsulta — você escolhe.</p>
@@ -557,6 +578,39 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+
+// ── Contador animado (mobile only) ──
+function animateCounter(el){
+  const count = parseInt(el.dataset.count);
+  const suffix = el.dataset.suffix || '';
+  const text = el.dataset.text || '';
+  if(text){el.classList.add('counted');return}
+  const duration = 1200;
+  const steps = 40;
+  const increment = count / steps;
+  let current = 0;
+  el.classList.add('counted');
+  const timer = setInterval(() => {
+    current += increment;
+    if(current >= count){
+      current = count;
+      clearInterval(timer);
+    }
+    el.textContent = Math.floor(current) + suffix;
+  }, duration / steps);
+}
+
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting && window.innerWidth <= 900){
+      const nums = entry.target.querySelectorAll('.stat-num[data-count]');
+      nums.forEach(n => { if(!n.classList.contains('counted')) animateCounter(n); });
+    }
+  });
+}, {threshold: 0.3});
+
+document.querySelectorAll('.sobre-stats').forEach(el => counterObs.observe(el));
 
 // Carrossel depoimentos
 const grid = document.querySelector('.depo-grid');
