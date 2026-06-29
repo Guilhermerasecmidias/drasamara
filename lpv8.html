@@ -32,7 +32,7 @@ section{padding:72px 24px}
 .hero-location{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,38px);font-weight:600;color:var(--text-dark);letter-spacing:.5px;margin-bottom:16px;text-transform:uppercase;line-height:1.05;text-align:center}
 h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:400;line-height:1.15;color:var(--text-dark);margin-bottom:20px;text-align:center}
 h1 em{font-style:italic;color:var(--rose)}
-.hero-sub{font-size:14px;color:var(--text-mid);font-weight:300;line-height:1.8;margin-bottom:20px;max-width:420px;text-align:center}
+.hero-sub{font-size:17px;color:var(--text-mid);font-weight:400;line-height:1.8;margin-bottom:20px;max-width:420px;text-align:center}
 .crm-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--text-light);border:1px solid var(--border);padding:5px 12px;border-radius:20px;background:transparent;letter-spacing:.3px}
 .hero-right{position:relative;overflow:hidden;background:var(--rose-light)}
 .hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
@@ -41,7 +41,7 @@ h1 em{font-style:italic;color:var(--rose)}
 /* ── SERVIÇOS ── */
 #servicos{background:var(--cream)}
 .servicos-header{text-align:center;max-width:520px;margin:0 auto 44px}
-.servicos-header p{font-size:15px;color:var(--text-light);line-height:1.7;margin-top:10px}
+.servicos-header p{font-size:17px;color:var(--text-mid);line-height:1.7;margin-top:10px;font-weight:400}
 .servicos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .servico-card{background:var(--warm-white);border:1px solid var(--border);border-radius:14px;padding:22px;transition:all .3s ease;position:relative;overflow:hidden}
 .servico-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--rose),var(--rose-mid));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
@@ -49,8 +49,8 @@ h1 em{font-style:italic;color:var(--rose)}
 .servico-card:hover::before{transform:scaleX(1)}
 .servico-icon{width:38px;height:38px;border-radius:9px;background:var(--rose-light);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
 .servico-icon svg{width:18px;height:18px;stroke:var(--rose);fill:none;stroke-width:1.5}
-.servico-card h3{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:var(--text-dark);margin-bottom:6px}
-.servico-card p{font-size:12px;color:var(--text-light);line-height:1.6}
+.servico-card h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--text-dark);margin-bottom:6px}
+.servico-card p{font-size:14px;color:var(--text-mid);line-height:1.6;font-weight:400}
 
 /* ── DEPOIMENTOS ── */
 #depoimentos{background:var(--rose-light)}
@@ -63,17 +63,17 @@ h1 em{font-style:italic;color:var(--rose)}
 .depo-author{display:flex;align-items:center;gap:10px;padding-top:10px;border-top:1px solid var(--border)}
 .depo-avatar{width:34px;height:34px;border-radius:50%;background:var(--rose-mid);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#fff;flex-shrink:0}
 .depo-name{font-size:17px;font-weight:500;color:var(--text-dark);font-family:'Cormorant Garamond',serif}
-.depo-verified{display:inline-flex;align-items:center;gap:4px;font-size:10px;color:var(--gold);background:rgba(184,151,106,.1);padding:2px 8px;border-radius:20px;border:1px solid rgba(184,151,106,.2);margin-top:2px}
+.depo-verified{display:inline-flex;align-items:center;gap:4px;font-size:10px;color:var(--gold);background:rgba(184,151,106,.1);padding:2px 8px;border-radius:20px;border:1px solid rgba(184,151,106,.2);margin-top:2px;font-weight:400}
 
 /* ── SOBRE ── */
 #sobre{background:var(--warm-white)}
 .sobre-foto{width:100%;aspect-ratio:3/4;border-radius:16px;overflow:hidden;margin-bottom:40px;background:var(--warm-white);border:1px solid var(--border)}
 .sobre-foto-img{display:none}
-.sobre-text p{font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:14px;font-weight:300;text-align:center}
+.sobre-text p{font-size:17px;color:var(--text-mid);line-height:1.85;margin-bottom:14px;font-weight:400;text-align:center}
 .sobre-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:28px}
 .stat{background:var(--cream);padding:18px 20px;text-align:center}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--rose)}
-.stat-label{font-size:11px;color:var(--text-light);margin-top:2px}
+.stat-label{font-size:13px;color:var(--text-light);margin-top:2px;font-weight:400}
 
 /* ── LOCALIZAÇÃO ── */
 #localizacao{background:var(--cream)}
@@ -81,9 +81,9 @@ h1 em{font-style:italic;color:var(--rose)}
 .loc-card h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--text-dark);margin-bottom:20px;text-align:center}
 .loc-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
 .loc-item svg{width:16px;height:16px;stroke:var(--rose);flex-shrink:0;margin-top:2px;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.loc-item span{font-size:14px;color:var(--text-mid);line-height:1.6}
+.loc-item span{font-size:16px;color:var(--text-mid);line-height:1.6;font-weight:400}
 .loc-tele{background:linear-gradient(135deg,var(--rose-light),var(--gold-light));border-radius:12px;padding:18px 20px;border:1px solid var(--border);margin-top:16px;text-align:center}
-.loc-tele p{font-size:13px;color:var(--text-mid);margin-top:4px}
+.loc-tele p{font-size:15px;color:var(--text-mid);margin-top:4px;font-weight:400}
 
 /* ── MAPA ── */
 #mapa{padding:0}
@@ -94,7 +94,7 @@ h1 em{font-style:italic;color:var(--rose)}
 #cta-final{background:var(--text-dark);text-align:center;padding:72px 0;position:relative;overflow:hidden}
 #cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,132,122,.1) 0%,transparent 70%);pointer-events:none}
 #cta-final .section-title{color:#fff;text-align:center}
-#cta-final p{font-size:15px;color:rgba(255,255,255,.55);font-weight:300}
+#cta-final p{font-size:17px;color:rgba(255,255,255,.6);font-weight:400}
 .crm-final{margin-top:20px;font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.5px}
 
 /* ── BARRA FIXA ── */
@@ -453,220 +453,220 @@ section{width:100%;box-sizing:border-box}
     <div class="carousel-track" id="carouselTrack">
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Minha experiência com a Dra. Sâmara tem sido excelente! Ela é uma profissional extremamente atenciosa, cuidadosa e transmite muita segurança em cada consulta. Explica tudo com clareza e sempre se preocupa com o bem-estar do paciente. O atendimento é humanizado, o que faz toda a diferença. Recomendo de olhos fechados!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B01</div>
+          <div class="depo-avatar">AL</div>
           <div>
-            <div class="depo-name">Bla 01</div>
+            <div class="depo-name">Alicia</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Colocação de DIU sem nenhuma dor, sem intercorrências, profissional ímpar!!!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B02</div>
+          <div class="depo-avatar">BF</div>
           <div>
-            <div class="depo-name">Bla 02</div>
+            <div class="depo-name">Betânia Feres</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Dra. Sâmara, faltam palavras pra agradecer toda a atenção. Muito simpática, carismática. Ficamos à vontade durante a consulta. Profissional incrível. Muito delicada ao examinar. Com muito respeito. Estou lisonjeada em conhecê-la."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B03</div>
+          <div class="depo-avatar">VL</div>
           <div>
-            <div class="depo-name">Bla 03</div>
+            <div class="depo-name">Vânia Lucia da Silva Souza</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Super atenciosa e profissional, além de excelente médica! Zero dor durante o procedimento! Recomendo!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B04</div>
+          <div class="depo-avatar">PR</div>
           <div>
-            <div class="depo-name">Bla 04</div>
+            <div class="depo-name">Priscila</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Fui muito bem atendida pela doutora, que foi extremamente atenciosa, educada, acolhedora e profissional durante toda a consulta. Ela esclareceu minhas dúvidas com paciência e me transmitiu muita segurança. Foi uma experiência muito positiva. Nota 10!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B05</div>
+          <div class="depo-avatar">IM</div>
           <div>
-            <div class="depo-name">Bla 05</div>
+            <div class="depo-name">Isabela Maria</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Profissional incrível, didática e atenciosa, sem dúvidas vou manter minha rotina ginecológica com ela!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B06</div>
+          <div class="depo-avatar">MR</div>
           <div>
-            <div class="depo-name">Bla 06</div>
+            <div class="depo-name">Miriane Ramos</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Sou apaixonada na empatia da Dra. Ela realmente além de eficiente, se preocupa com o nosso bem estar e com o fato de estarmos à vontade. Muito atenciosa."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B07</div>
+          <div class="depo-avatar">VI</div>
           <div>
-            <div class="depo-name">Bla 07</div>
+            <div class="depo-name">Vitória</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Fiquei muito feliz com o atendimento, me senti muito à vontade e confortável, esclarece todas as dúvidas, muito sábia."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B08</div>
+          <div class="depo-avatar">JA</div>
           <div>
-            <div class="depo-name">Bla 08</div>
+            <div class="depo-name">Jacqueline</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Excelente atendimento com a Dra. Sâmara! Profissional atenciosa e dedicada, fez com que eu me sentisse confortável e bem cuidada. Recomendo a todos!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B09</div>
+          <div class="depo-avatar">FT</div>
           <div>
-            <div class="depo-name">Bla 09</div>
+            <div class="depo-name">Fabiana Teixeira Soares</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Sâmara é muito atenciosa, tranquila, tirou minhas dúvidas e me examinou cuidadosamente. Gostei muito!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B10</div>
+          <div class="depo-avatar">VM</div>
           <div>
-            <div class="depo-name">Bla 10</div>
+            <div class="depo-name">V.M.D.R.</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Ótima médica, atenciosa, explicou tudo com detalhes, educada e muito cuidadosa. Ainda estou em processo de acompanhamento, mas já indico muito o trabalho da Dra."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B11</div>
+          <div class="depo-avatar">LH</div>
           <div>
-            <div class="depo-name">Bla 11</div>
+            <div class="depo-name">Lucia Helena de Oliveira Paula</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Excelente profissional! Muito empática e atenciosa, com condutas muito sensatas."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B12</div>
+          <div class="depo-avatar">BI</div>
           <div>
-            <div class="depo-name">Bla 12</div>
+            <div class="depo-name">Bianca</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Gostei muito do atendimento, super atenciosa. Me senti à vontade com a Dra. Sâmara em falar do que estava sentindo e do que estava procurando em relação ao tratamento de pré menopausa."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B13</div>
+          <div class="depo-avatar">MA</div>
           <div>
-            <div class="depo-name">Bla 13</div>
+            <div class="depo-name">Márcia</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Excelente profissional. Super atenciosa. Tira todas as dúvidas e passa tranquilidade durante o tratamento."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B14</div>
+          <div class="depo-avatar">BS</div>
           <div>
-            <div class="depo-name">Bla 14</div>
+            <div class="depo-name">Brenda Souza</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Dra. Sâmara foi pontual, educada, explicou tudo sobre os exames e sobre o uso dos remédios que ela passou. Atendimento ótimo!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B15</div>
+          <div class="depo-avatar">AR</div>
           <div>
-            <div class="depo-name">Bla 15</div>
+            <div class="depo-name">Ana Rosa Pereira Costa</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Ótimo atendimento. Super atenciosa. Entendeu todas as minhas queixas e propôs soluções."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B16</div>
+          <div class="depo-avatar">IC</div>
           <div>
-            <div class="depo-name">Bla 16</div>
+            <div class="depo-name">I.C.</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Uma excelente pessoa como ser humana e profissional. Muito atenciosa, cuidadosa, dedicada, trata a gente com maior cuidado e carinho. Que Deus lhe abençoe grandemente."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B17</div>
+          <div class="depo-avatar">TL</div>
           <div>
-            <div class="depo-name">Bla 17</div>
+            <div class="depo-name">Tayanara Lourenço</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Gostei da consulta! Atenciosa, simpática e o consultório é lindo e aconchegante."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B18</div>
+          <div class="depo-avatar">LM</div>
           <div>
-            <div class="depo-name">Bla 18</div>
+            <div class="depo-name">Larissa M Magalhães</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Muito simpática, eficiente, bem humorada. Perfeita. Excelente profissional e pessoa."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B19</div>
+          <div class="depo-avatar">MC</div>
           <div>
-            <div class="depo-name">Bla 19</div>
+            <div class="depo-name">Maria do Carmo de Oliveira Nascimento</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"A doutora é atenciosa, profissional e esclareceu tudo que eu precisava saber. Com certeza vou indicá-la a todas as minhas amigas. O atendimento desde a recepção é acolhedor."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B20</div>
+          <div class="depo-avatar">CV</div>
           <div>
-            <div class="depo-name">Bla 20</div>
+            <div class="depo-name">Claudia Valeriano Mendes</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
@@ -676,220 +676,220 @@ section{width:100%;box-sizing:border-box}
   <div class="carousel-wrap carousel-wrap-alt" style="margin-top:16px"><div class="carousel-track" id="carouselTrack2">
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"A doutora é atenciosa, profissional e esclareceu tudo que eu precisava saber. Com certeza vou indicá-la a todas as minhas amigas. O atendimento desde a recepção é acolhedor."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B20</div>
+          <div class="depo-avatar">CV</div>
           <div>
-            <div class="depo-name">Bla 20</div>
+            <div class="depo-name">Claudia Valeriano Mendes</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Muito simpática, eficiente, bem humorada. Perfeita. Excelente profissional e pessoa."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B19</div>
+          <div class="depo-avatar">MC</div>
           <div>
-            <div class="depo-name">Bla 19</div>
+            <div class="depo-name">Maria do Carmo de Oliveira Nascimento</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Gostei da consulta! Atenciosa, simpática e o consultório é lindo e aconchegante."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B18</div>
+          <div class="depo-avatar">LM</div>
           <div>
-            <div class="depo-name">Bla 18</div>
+            <div class="depo-name">Larissa M Magalhães</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Uma excelente pessoa como ser humana e profissional. Muito atenciosa, cuidadosa, dedicada, trata a gente com maior cuidado e carinho. Que Deus lhe abençoe grandemente."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B17</div>
+          <div class="depo-avatar">TL</div>
           <div>
-            <div class="depo-name">Bla 17</div>
+            <div class="depo-name">Tayanara Lourenço</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Ótimo atendimento. Super atenciosa. Entendeu todas as minhas queixas e propôs soluções."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B16</div>
+          <div class="depo-avatar">IC</div>
           <div>
-            <div class="depo-name">Bla 16</div>
+            <div class="depo-name">I.C.</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Dra. Sâmara foi pontual, educada, explicou tudo sobre os exames e sobre o uso dos remédios que ela passou. Atendimento ótimo!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B15</div>
+          <div class="depo-avatar">AR</div>
           <div>
-            <div class="depo-name">Bla 15</div>
+            <div class="depo-name">Ana Rosa Pereira Costa</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Excelente profissional. Super atenciosa. Tira todas as dúvidas e passa tranquilidade durante o tratamento."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B14</div>
+          <div class="depo-avatar">BS</div>
           <div>
-            <div class="depo-name">Bla 14</div>
+            <div class="depo-name">Brenda Souza</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Gostei muito do atendimento, super atenciosa. Me senti à vontade com a Dra. Sâmara em falar do que estava sentindo e do que estava procurando em relação ao tratamento de pré menopausa."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B13</div>
+          <div class="depo-avatar">MA</div>
           <div>
-            <div class="depo-name">Bla 13</div>
+            <div class="depo-name">Márcia</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Excelente profissional! Muito empática e atenciosa, com condutas muito sensatas."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B12</div>
+          <div class="depo-avatar">BI</div>
           <div>
-            <div class="depo-name">Bla 12</div>
+            <div class="depo-name">Bianca</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Ótima médica, atenciosa, explicou tudo com detalhes, educada e muito cuidadosa. Ainda estou em processo de acompanhamento, mas já indico muito o trabalho da Dra."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B11</div>
+          <div class="depo-avatar">LH</div>
           <div>
-            <div class="depo-name">Bla 11</div>
+            <div class="depo-name">Lucia Helena de Oliveira Paula</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Sâmara é muito atenciosa, tranquila, tirou minhas dúvidas e me examinou cuidadosamente. Gostei muito!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B10</div>
+          <div class="depo-avatar">VM</div>
           <div>
-            <div class="depo-name">Bla 10</div>
+            <div class="depo-name">V.M.D.R.</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Excelente atendimento com a Dra. Sâmara! Profissional atenciosa e dedicada, fez com que eu me sentisse confortável e bem cuidada. Recomendo a todos!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B09</div>
+          <div class="depo-avatar">FT</div>
           <div>
-            <div class="depo-name">Bla 09</div>
+            <div class="depo-name">Fabiana Teixeira Soares</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Fiquei muito feliz com o atendimento, me senti muito à vontade e confortável, esclarece todas as dúvidas, muito sábia."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B08</div>
+          <div class="depo-avatar">JA</div>
           <div>
-            <div class="depo-name">Bla 08</div>
+            <div class="depo-name">Jacqueline</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Sou apaixonada na empatia da Dra. Ela realmente além de eficiente, se preocupa com o nosso bem estar e com o fato de estarmos à vontade. Muito atenciosa."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B07</div>
+          <div class="depo-avatar">VI</div>
           <div>
-            <div class="depo-name">Bla 07</div>
+            <div class="depo-name">Vitória</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Profissional incrível, didática e atenciosa, sem dúvidas vou manter minha rotina ginecológica com ela!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B06</div>
+          <div class="depo-avatar">MR</div>
           <div>
-            <div class="depo-name">Bla 06</div>
+            <div class="depo-name">Miriane Ramos</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Fui muito bem atendida pela doutora, que foi extremamente atenciosa, educada, acolhedora e profissional durante toda a consulta. Ela esclareceu minhas dúvidas com paciência e me transmitiu muita segurança. Foi uma experiência muito positiva. Nota 10!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B05</div>
+          <div class="depo-avatar">IM</div>
           <div>
-            <div class="depo-name">Bla 05</div>
+            <div class="depo-name">Isabela Maria</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Super atenciosa e profissional, além de excelente médica! Zero dor durante o procedimento! Recomendo!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B04</div>
+          <div class="depo-avatar">PR</div>
           <div>
-            <div class="depo-name">Bla 04</div>
+            <div class="depo-name">Priscila</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Dra. Sâmara, faltam palavras pra agradecer toda a atenção. Muito simpática, carismática. Ficamos à vontade durante a consulta. Profissional incrível. Muito delicada ao examinar. Com muito respeito. Estou lisonjeada em conhecê-la."</p>
         <div class="depo-author">
-          <div class="depo-avatar">B03</div>
+          <div class="depo-avatar">VL</div>
           <div>
-            <div class="depo-name">Bla 03</div>
+            <div class="depo-name">Vânia Lucia da Silva Souza</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Colocação de DIU sem nenhuma dor, sem intercorrências, profissional ímpar!!!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B02</div>
+          <div class="depo-avatar">BF</div>
           <div>
-            <div class="depo-name">Bla 02</div>
+            <div class="depo-name">Betânia Feres</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
       </div>
       <div class="carousel-card">
         <div class="depo-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="carousel-text">"hahahahahahahahahahahahah"</p>
+        <p class="carousel-text">"Minha experiência com a Dra. Sâmara tem sido excelente! Ela é uma profissional extremamente atenciosa, cuidadosa e transmite muita segurança em cada consulta. Explica tudo com clareza e sempre se preocupa com o bem-estar do paciente. O atendimento é humanizado, o que faz toda a diferença. Recomendo de olhos fechados!"</p>
         <div class="depo-author">
-          <div class="depo-avatar">B01</div>
+          <div class="depo-avatar">AL</div>
           <div>
-            <div class="depo-name">Bla 01</div>
+            <div class="depo-name">Alicia</div>
             <span class="depo-verified">✓ Consulta verificada · Doctoralia</span>
           </div>
         </div>
