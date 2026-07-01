@@ -260,9 +260,11 @@ section{width:100%;box-sizing:border-box}
   padding:24px;
   display:flex;
   flex-direction:column;
-  gap:12px;
+  justify-content:space-between;
+  gap:0;
   box-shadow:0 2px 12px rgba(200,132,122,.08);
   transition:box-shadow .2s ease;
+  min-height:280px;
 }
 .carousel-card:hover{box-shadow:0 6px 24px rgba(200,132,122,.15)}
 .carousel-text{
@@ -270,7 +272,14 @@ section{width:100%;box-sizing:border-box}
   font-size:19px;font-weight:600;
   color:var(--text-dark);line-height:1.7;
   flex:1;
+  overflow-y:auto;
+  scrollbar-width:thin;
+  scrollbar-color:var(--rose-mid) transparent;
+  padding-right:4px;
 }
+.carousel-text::-webkit-scrollbar{width:3px}
+.carousel-text::-webkit-scrollbar-track{background:transparent}
+.carousel-text::-webkit-scrollbar-thumb{background:var(--rose-mid);border-radius:3px}
 .carousel-dots{
   display:flex;justify-content:center;
   gap:6px;margin-top:20px;
@@ -285,10 +294,10 @@ section{width:100%;box-sizing:border-box}
   width:20px;border-radius:3px;
 }
 @media(max-width:900px){
-  .carousel-card{flex:0 0 280px}
+  .carousel-card{flex:0 0 280px;height:260px}
 }
 @media(max-width:580px){
-  .carousel-card{flex:0 0 85vw}
+  .carousel-card{flex:0 0 85vw;height:260px}
 }
 
 /* ── CARROSSEL FILEIRA 2 ── */
@@ -305,6 +314,16 @@ section{width:100%;box-sizing:border-box}
 }
 .carousel-wrap-alt .depo-avatar{
   background:var(--rose);
+}
+
+/* ── Autor sempre no rodapé ── */
+.carousel-card .depo-author{
+  margin-top:20px;
+  padding-top:14px;
+  border-top:1px solid var(--border);
+}
+.carousel-card .carousel-text{
+  flex:1;
 }
 </style>
 </head>
